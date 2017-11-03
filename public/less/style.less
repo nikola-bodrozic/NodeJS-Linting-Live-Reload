@@ -1,0 +1,31 @@
+.container {
+    margin: 0 10px;
+}
+.wrapper {
+    width: 100%;
+    background-color: coral;
+}
+#logo {
+    float: right;
+}
+#main-menu {
+    float: right;
+    li {
+        list-style: none;
+        float: left;
+        margin-left: 20px;
+        a {
+            background-color: greenyellow;
+            &:hover {
+                background-color: aquamarine;
+            }
+        }
+    }
+}
+.clearfix {
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}

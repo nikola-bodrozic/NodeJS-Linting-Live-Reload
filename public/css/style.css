@@ -1,0 +1,29 @@
+.container {
+  margin: 0 10px;
+}
+.wrapper {
+  width: 100%;
+  background-color: antiquewhite;
+}
+#logo {
+  float: left;
+}
+#main-menu {
+  float: right;
+}
+#main-menu li {
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+}
+#main-menu li a {
+  background-color: greenyellow;
+}
+#main-menu li a:hover {
+  background-color: aquamarine;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}

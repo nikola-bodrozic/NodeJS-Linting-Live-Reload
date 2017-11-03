@@ -1,0 +1,24 @@
+{
+  "author": {
+    "name": "Nikola Bodrozic"
+  },
+  "name": "lint-and-run-html",
+  "version": "1.0.0",
+  "description": "Development environment with LESS, linting & web server with live reload on file change",
+  "scripts": {
+    "less-gen": "lessc -l public/less/style.less && lessc public/less/style.less public/css/style.css && echo Valid LESS && exit 0",
+    "lint-css": "csslint --ignore=ids,order-alphabetical  public/css/ && echo Valid CSS && exit 0",
+    "lint-js": "eslint public/js && echo Valid JS && exit 0",
+    "test": "npm run less-gen && npm run lint-css && npm run lint-js && node run-w3c-valid.js && exit 0",
+    "start": "live-server --port=9000 --open=public/ --watch=public/ --verbose --ignore=public/less/"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "csslint": "^1.0.5",
+    "html-validator": "^2.2.3",
+    "less": "^3.0.0-alpha.3",
+    "live-server": "^1.2.0"
+  }
+}
