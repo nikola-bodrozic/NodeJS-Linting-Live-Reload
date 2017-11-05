@@ -1,10 +1,23 @@
+/* Global */
 .container {
   margin: 0 10px;
 }
 .wrapper {
   width: 100%;
   background-color: antiquewhite;
+  margin-top: 5px;
 }
+.wrapper:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.clearfix {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* header */
 #logo {
   float: left;
 }
@@ -18,12 +31,29 @@
 }
 #main-menu li a {
   background-color: greenyellow;
+  padding: 10px;
 }
 #main-menu li a:hover {
   background-color: aquamarine;
 }
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: block;
+#boxwrapp {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#boxwrapp li {
+  background-color: red;
+  float: left;
+  width: 33.3%;
+}
+.holder {
+  margin: 5px;
+  padding: 5px;
+  background-color: green;
+}
+.holder p {
+  text-align: center;
+}
+.center {
+  text-align: center;
 }

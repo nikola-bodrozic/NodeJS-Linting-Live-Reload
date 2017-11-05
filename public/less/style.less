@@ -1,13 +1,36 @@
+@wrapp_color: antiquewhite;
+@menu_item: greenyellow;
+@menu_item_hover: aquamarine;
+@background_color_4: red;
+@background_color_5: green;
+
+/* Global */
 .container {
     margin: 0 10px;
 }
+
 .wrapper {
     width: 100%;
-    background-color: coral;
+    background-color: @wrapp_color;
+    margin-top: 5px;
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
 }
+
+.clearfix {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* header */
 #logo {
-    float: right;
+    float: left;
 }
+
 #main-menu {
     float: right;
     li {
@@ -15,17 +38,33 @@
         float: left;
         margin-left: 20px;
         a {
-            background-color: greenyellow;
+            background-color: @menu_item;
+            padding: 10px;
             &:hover {
-                background-color: aquamarine;
+                background-color: @menu_item_hover;
             }
         }
     }
 }
-.clearfix {
-    &:after {
-        clear: both;
-        content: "";
-        display: block;
+
+#boxwrapp {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        background-color: @background_color_4;
+        float: left;
+        width: 33.3%;
     }
+}
+.holder {
+    p {
+        text-align: center;
+    }
+    margin: 5px;
+    padding: 5px;
+    background-color: @background_color_5;
+}
+.center {
+    text-align: center;
 }
